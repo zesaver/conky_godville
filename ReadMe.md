@@ -4,7 +4,7 @@ Conky Widget for Godville
 About
 -----
 
-This widget provide a Godville game client for Linux Conky. It is based on the [script](http://godville.net/forums/show_topic/257) by [lol2Fast4U](http://godville.net/gods/lol2Fast4U).
+This widget provides a Godville game client (read only) for Linux Conky. It is based on the [script](http://godville.net/forums/show_topic/257) by [lol2Fast4U](http://godville.net/gods/lol2Fast4U).
 Changes:
 - updated to be compartible with new Conky versions
 - added Conky Manager support
@@ -12,6 +12,8 @@ Changes:
 
 Installing
 ----------
+
+First you need to allow API requests on your [godville settings page](http://godville.net/user/profile). Then...
 
 If you are using git and Conky Manager (recommended):
 
@@ -28,4 +30,4 @@ just place all the files to any folder you like, make shure you've allowed execu
 Miscellaneous
 -------------
 
-You can use, copy, modify and share any part of this script without any restrictions. Also fill free to contact me if any questions.
+You can use, copy, modify and share any part of this script without any restrictions. Also fill free to contact me if any questions or ideas.
