@@ -27,6 +27,8 @@ just place all the files to any folder you like, make shure you've allowed execu
 
     ${execi 15 /path/to/godville.sh  | fold -s -w 50}
 
+P.S.: you may need to install `xsltproc` (`sudo apt-get install xsltproc`) to be able to parse xml answer from the server. Switching to json and some "unix-native" parser is planned in future but not realized yet.
+
 Miscellaneous
 -------------
 
