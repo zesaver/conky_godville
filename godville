@@ -40,7 +40,7 @@ color1 77B753
 
 minimum_size 300 300
 TEXT
-${color1}${execi 15 ~/.conky/Godville/godville.sh  | fold -s -w 50}
+${color1}${execi 15 ./godville.py  | fold -s -w 50}
 
 
 
