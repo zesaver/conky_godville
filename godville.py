@@ -7,8 +7,8 @@ username = 'ZESAVER'
 resp = requests.get("http://godville.net/gods/api/"+username+".json")
 data = resp.json()
 
-print "Героиня: " if data["gender"] == "female" else "Герой: ",(data["name"].encode('utf-8'))
-print 'Клан:',data["clan"]
+print "Героиня:" if data["gender"] == "female" else "Герой:",(data["name"].encode('utf-8'))
+print 'Клан: %s в %s' % (data["clan_position"].encode('utf-8'),data["clan"].encode('utf-8')) if data["clan"] else 'Клан: нет'
 print 'Характер:',data["alignment"].encode('utf-8')
 print 'Девиз:',data["motto"].encode('utf-8')
 print "Уровень: %.0f (%.0f/100)" % (data["level"],data["exp_progress"])
@@ -18,6 +18,11 @@ print 'Золотых:',data["gold_approx"].encode('utf-8')
 print "Кирпичей: %.0f/1000" % (data["bricks_cnt"])
 print 'Задание:',data["quest"].encode('utf-8'),"(%.0f/100)" % (data["quest_progress"])
 print 'Последняя запись:',data["diary_last"].encode('utf-8')
+if data["town_name"]:
+	print "Город:",data["town_name"].encode('utf-8')
+else:
+	print "Столбов от столицы:",data["distance"]
+
 print "Инвентарь: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
 
 inventory={}
