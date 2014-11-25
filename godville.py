@@ -18,10 +18,10 @@ print 'Золотых:',data["gold_approx"].encode('utf-8')
 print "Кирпичей: %.0f/1000" % (data["bricks_cnt"])
 print 'Задание:',data["quest"].encode('utf-8'),"(%.0f/100)" % (data["quest_progress"])
 print 'Последняя запись:',data["diary_last"].encode('utf-8')
-if data["town_name"]:
-	print "Город:",data["town_name"].encode('utf-8')
-else:
+if data["distance"]:
 	print "Столбов от столицы:",data["distance"]
+else:
+	print "Город:",data["town_name"].encode('utf-8')
 
 print "Инвентарь: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
 
