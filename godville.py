@@ -23,7 +23,7 @@ if data["distance"]:
 else:
 	print "Город:",data["town_name"].encode('utf-8')
 
-print "Инвентарь: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
+print "В карманах: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
 
 inventory={}
 for n, v in data["inventory"].iteritems():
