@@ -8,7 +8,7 @@ resp = requests.get("http://godville.net/gods/api/"+username+".json")
 data = resp.json()
 
 print "Героиня:" if data["gender"] == "female" else "Герой:",(data["name"].encode('utf-8'))
-print 'Гильдия: %s в %s' % (data["clan_position"].encode('utf-8'),data["clan"].encode('utf-8')) if data["clan"] else 'Клан: нет'
+print 'Гильдия: %s в %s' % (data["clan_position"].encode('utf-8'),data["clan"].encode('utf-8')) if data["clan"] else 'Гильдия: нет'
 print 'Характер:',data["alignment"].encode('utf-8')
 print 'Девиз:',data["motto"].encode('utf-8')
 print "Уровень: %.0f (%.0f/100)" % (data["level"],data["exp_progress"])
