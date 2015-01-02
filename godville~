@@ -8,6 +8,7 @@ text_buffer_size 2048
 gap_x 10
 gap_y 10
 minimum_size 300 300
+maximum_width 600
 
 own_window yes
 own_window_type normal
@@ -37,8 +38,9 @@ uppercase no
 # Green
 color1 77B753
 
+minimum_size 300 300
 TEXT
-${color1}${execi 15 ./godville.py  | fold -s -w 60}
+${color1}${execi 15 ./godville.py  | fold -s -w 50}
 
 
 

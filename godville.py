@@ -27,8 +27,8 @@ else:
 ### PET
 if data["pet"]:
 	print "   Питомец:"
-	print "Имя:",data["pet"]["pet_name"]
-	print "Вид:",data["pet"]["pet_class"]
+	print "Имя:",data["pet"]["pet_name"].encode('utf-8')
+	print "Вид:",data["pet"]["pet_class"].encode('utf-8')
 	print "Уровень:",data["pet"]["pet_level"]
 	if data["pet"]["wounded"]:
 		print "!!! Контужен !!!"
