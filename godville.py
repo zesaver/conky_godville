@@ -7,6 +7,7 @@ username = 'ZESAVER'
 resp = requests.get("http://godville.net/gods/api/"+username+".json")
 data = resp.json()
 
+### GENERAL
 print "Героиня:" if data["gender"] == "female" else "Герой:",(data["name"].encode('utf-8'))
 print 'Гильдия: %s в %s' % (data["clan_position"].encode('utf-8'),data["clan"].encode('utf-8')) if data["clan"] else 'Гильдия: нет'
 print 'Характер:',data["alignment"].encode('utf-8')
@@ -23,6 +24,17 @@ if data["distance"]:
 else:
 	print "Город:",data["town_name"].encode('utf-8')
 
+### PET
+if data["pet"]:
+	print "   Питомец:"
+	print "Имя:",data["pet"]["pet_name"]
+	print "Вид:",data["pet"]["pet_class"]
+	print "Уровень:",data["pet"]["pet_level"]
+	if data["pet"]["wounded"]:
+		print "!!! Контужен !!!"
+	print
+
+### INVENTORY
 print "В карманах можно найти: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
 
 inventory={}
