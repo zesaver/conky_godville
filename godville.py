@@ -19,26 +19,30 @@ print 'Золотых:',data["gold_approx"].encode('utf-8')
 print "Кирпичей: %.0f/1000" % (data["bricks_cnt"])
 print 'Задание:',data["quest"].encode('utf-8'),"(%.0f/100)" % (data["quest_progress"])
 print 'Последняя запись:',data["diary_last"].encode('utf-8')
-if data["distance"]:
-	print "Столбов от столицы:",data["distance"]
-else:
-	print "Город:",data["town_name"].encode('utf-8')
+
+if "town_name" in data: #if no town_name key present we suppose hero is on arena
+	if data["town_name"]:
+		print "Город:",data["town_name"].encode('utf-8')
+	else:
+		print "Столбов от столицы:",data["distance"]
 
 ### PET
-if data["pet"]:
+if "pet" in data:
 	print "   Питомец:"
 	print "Имя:",data["pet"]["pet_name"].encode('utf-8')
 	print "Вид:",data["pet"]["pet_class"].encode('utf-8')
 	print "Уровень:",data["pet"]["pet_level"]
-	if data["pet"]["wounded"]:
+	if "wounded" in data["pet"]:
 		print "!!! Контужен !!!"
 	print
 
 ### INVENTORY
-print "В карманах можно найти: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
+if data["inventory"]:
+	print "В карманах можно найти: %.0f/%.0f" % (data["inventory_num"],data["inventory_max_num"])
+	inventory={}
+	for n, v in data["inventory"].iteritems():
+		inventory[v["pos"]] = "  %s %s" % (v['pos']+1, n.encode('utf-8'))
+	print "\n".join([inventory[i] for i in sorted(inventory.keys())])
 
-inventory={}
-for n, v in data["inventory"].iteritems():
-	inventory[v["pos"]] = "  %s %s" % (v['pos']+1, n.encode('utf-8'))
-
-print "\n".join([inventory[i] for i in sorted(inventory.keys())])
+else:
+	print "В карманах героини пусто" if data["gender"] == "female" else "В карманах героя пусто"
