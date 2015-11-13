@@ -16,7 +16,13 @@ print "Уровень: %.0f (%.0f/100)" % (data["level"],data["exp_progress"])
 print "Здоровье: %.0f/%.0f" % (data["health"],data["max_health"])
 print "Прана: %.0f/100" % (data["godpower"])
 print 'Золотых:',data["gold_approx"].encode('utf-8')
-print "Кирпичей: %.0f/1000" % (data["bricks_cnt"])
+##Temple
+if data["bricks_cnt"] < 1000:
+	print "Кирпичей: %.0f/1000" % (data["bricks_cnt"])
+elif data["wood_cnt"] < 1000:
+	print "Дерева гофер: %.0f/1000" % (data["wood_cnt"])
+else:
+	print "Храм и ковчег достроены"
 print 'Задание:',data["quest"].encode('utf-8'),"(%.0f/100)" % (data["quest_progress"])
 print 'Последняя запись:',data["diary_last"].encode('utf-8')
 
