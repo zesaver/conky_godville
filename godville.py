@@ -22,6 +22,7 @@ if data["bricks_cnt"] < 1000:
 elif data["wood_cnt"] < 1000:
 	print "Дерева гофер: %.0f/1000" % (data["wood_cnt"])
 else:
+	print "Дерева гофер: %.0f/1000" % (data["wood_cnt"])
 	print "Храм и ковчег достроены"
 print 'Задание:',data["quest"].encode('utf-8'),"(%.0f/100)" % (data["quest_progress"])
 print 'Последняя запись:',data["diary_last"].encode('utf-8')
