@@ -3,7 +3,7 @@
 import requests
 
 username = 'ZESAVER'
-token = '206d464388e9'
+token = ''
 
 resp = requests.get("http://godville.net/gods/api/"+username+"/"+token)
 data = resp.json()
