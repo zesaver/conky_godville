@@ -5,8 +5,8 @@ double_buffer yes
 no_buffers yes
 text_buffer_size 2048
 
-gap_x 10
-gap_y 10
+gap_x 300
+gap_y 0
 minimum_size 300 300
 
 own_window yes
@@ -20,7 +20,7 @@ own_window_hints undecorated,sticky,skip_taskbar,below
 
 border_inner_margin 0
 border_outer_margin 0
-alignment bottom_middle
+alignment top_right
 
 draw_shades no
 draw_outline no
