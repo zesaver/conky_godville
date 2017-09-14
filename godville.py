@@ -3,7 +3,7 @@
 import requests
 
 username = 'ZESAVER'
-token = ''
+token = '206d464388e9'
 
 resp = requests.get("http://godville.net/gods/api/"+username+"/"+token)
 data = resp.json()
@@ -40,6 +40,15 @@ if not token:
 
 	### Arena
 	print "Арена: %.0f побед, %.0f поражений" % (data["arena_won"],data["arena_lost"])
+	if "fight_type" in data:
+		if data["fight_type"] == "sail":
+		  print "Заплыв!"
+		elif data["fight_type"] == "arena":
+		  print "На арене!"
+		elif data["fight_type"] == "challenge":
+		  print "Тренируется!"
+		elif data["fight_type"] == "dungeon":
+		  print "В подземелье!"
 
 else:
 	### GENERAL
