@@ -20,7 +20,7 @@ Installing
 
 First you need to allow API requests on your [godville settings page](http://godville.net/user/profile). Then...
 
-####If you are using git and Conky Manager (recommended):
+#### If you are using git and Conky Manager (recommended):
 
 just place all the files to the folder under your conky manager folder, make sure you've allowed executing of `godville.py` - and here you go!
 
@@ -30,7 +30,7 @@ You can do it with simple cloning the repo:
 
 Now you can activate it in Conky Manager.
 
-####If you are not using Conky Manager (not tested yet):
+#### If you are not using Conky Manager (not tested yet):
 
 just place all the files to any folder you like, make sure you've allowed executing of `godville.py` and add to your `~/.conkyrc` following:
 
