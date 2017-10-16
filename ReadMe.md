@@ -22,7 +22,7 @@ First you need to allow API requests on your [godville settings page](http://god
 
 #### If you are using git and Conky Manager (recommended):
 
-just place all the files to the folder under your conky manager folder, make sure you've allowed executing of `godville.py` - and here you go!
+just place all the files to the folder under your conky manager folder, provide your name and (optional) API key in `godville.py` and make sure you've allowed executing of `godville.py` - now here you go!
 
 You can do it with simple cloning the repo:
 
