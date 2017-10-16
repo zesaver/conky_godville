@@ -32,7 +32,7 @@ Now you can activate it in Conky Manager.
 
 #### If you are not using Conky Manager (not tested yet):
 
-just place all the files to any folder you like, make sure you've allowed executing of `godville.py` and add to your `~/.conkyrc` following:
+just place all the files to any folder you like, provide your name and (optional) API key in `godville.py` and make sure you've allowed executing of `godville.py`. Then add to your `~/.conkyrc` following:
 
     ${execi 15 /path/to/godville.py  | fold -s -w 50}
 
