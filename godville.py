@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import requests
 
-username = 'ZESAVER'
+username = ''
 token = ''
 
 resp = requests.get("http://godville.net/gods/api/"+username+"/"+token)
@@ -32,7 +32,7 @@ if not token:
   if "pet" in data:
     print "   Питомец:"
     print "Имя:",data["pet"]["pet_name"].encode('utf-8')
-    print "Вид:",data["pet"]["pet_class"].encode('utf-8')
+    #print "Вид:",data["pet"]["pet_class"].encode('utf-8') #temporary removed due undocumented changes in Godville API
     print "Уровень:",data["pet"]["pet_level"]
     if "wounded" in data["pet"]:
       print "!!! Контужен !!!"
@@ -95,7 +95,7 @@ else:
   if "pet" in data:
     print "   Питомец:"
     print "Имя:",data["pet"]["pet_name"].encode('utf-8')
-    print "Вид:",data["pet"]["pet_class"].encode('utf-8')
+    # print "Вид:",data["pet"]["pet_class"].encode('utf-8') #temporary removed due undocumented changes in Godville API
     print "Уровень:",data["pet"]["pet_level"]
     if "wounded" in data["pet"]:
       print "!!! Контужен !!!"
