@@ -36,6 +36,8 @@ just place all the files to any folder you like, provide your name and (optional
 
     ${execi 15 /path/to/godville.py  | fold -s -w 50}
 
+*Please, note the path to `godville.py` at the end of the conky file `godville`. By default it expects to be in the current working folder. Usually this is handled well by Conky app itself, but sometimes can lead to `file not found` issues.*
+
 
 Miscellaneous
 -------------
