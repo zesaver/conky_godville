@@ -4,8 +4,8 @@
 from urllib.request import urlopen
 import json
 
-username = 'ZESAVER'
-token = ''
+username = "ZESAVER"
+token = ""
 
 resp = urlopen("http://godville.net/gods/api/"+username+"/"+token)
 data = json.loads(resp.read())
@@ -14,12 +14,12 @@ if not token:
     # GENERAL
     print("Героиня:" if data["gender"] ==
           "female" else "Герой:", (data["name"]))
-    print('Гильдия: %s в %s' % (
-        data["clan_position"], data["clan"]) if data["clan"] else 'Гильдия: нет')
-    print('Характер:', data["alignment"])
-    print('Девиз:', data["motto"])
+    print("Гильдия: %s в %s" % (
+        data["clan_position"], data["clan"]) if data["clan"] else "Гильдия: нет")
+    print("Характер:", data["alignment"])
+    print("Девиз:", data["motto"])
     print("Уровень: %.0f" % (data["level"]))
-    print('Золотых:', data["gold_approx"])
+    print("Золотых:", data["gold_approx"])
     # Temple
     if data["bricks_cnt"] < 1000:
         print("Кирпичей: %.0f/1000" % (data["bricks_cnt"]))
@@ -59,14 +59,14 @@ else:
     # GENERAL
     print("Героиня:" if data["gender"] ==
           "female" else "Герой:", (data["name"]))
-    print('Гильдия: %s в %s' % (
-        data["clan_position"], data["clan"]) if data["clan"] else 'Гильдия: нет')
-    print('Характер:', data["alignment"])
-    print('Девиз:', data["motto"])
+    print("Гильдия: %s в %s" % (
+        data["clan_position"], data["clan"]) if data["clan"] else "Гильдия: нет")
+    print("Характер:", data["alignment"])
+    print("Девиз:", data["motto"])
     print("Уровень: %.0f (%.0f/100)" % (data["level"], data["exp_progress"]))
     print("Здоровье: %.0f/%.0f" % (data["health"], data["max_health"]))
     print("Прана: %.0f/100" % (data["godpower"]))
-    print('Золотых:', data["gold_approx"])
+    print("Золотых:", data["gold_approx"])
     # Temple
     if data["bricks_cnt"] < 1000:
         print("Кирпичей: %.0f/1000" % (data["bricks_cnt"]))
@@ -86,9 +86,9 @@ else:
         print("Тварей по паре: %.0fм, %.0fж" % (data["ark_m"], data["ark_f"]))
         print("Сбережения: %s/30М" % (data["savings"]))
         print()
-    print('Задание:', data["quest"],
+    print("Задание:", data["quest"],
           "(%.0f/100)" % (data["quest_progress"]))
-    print('Последняя запись:', data["diary_last"])
+    print("Последняя запись:", data["diary_last"])
 
     if "town_name" in data:  # if no town_name key present we suppose hero is on arena
         if data["town_name"]:
